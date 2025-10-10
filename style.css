@@ -1,0 +1,276 @@
+/* Общие сбросы */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  background-color: #f5f7fa;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Header */
+header {
+  padding: 2rem 1rem;
+  background: #570202;
+  color: #f2eee6;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: -1px;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.page-container {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 0;
+  min-height: calc(100vh - 140px);
+}
+
+.sidebar {
+  background-color: #ffffff;
+  padding: 1.5rem 0;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+}
+
+.sidebar .nav-link {
+  display: block;
+  color: #2c3e50;
+  text-decoration: none;
+  padding: 0.9rem 1.5rem;
+  margin: 0.3rem 0;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.sidebar .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 1.5rem;
+  bottom: 0.4rem;
+  width: 0;
+  height: 2px;
+  background-color: #570202;
+  transition: width 0.3s ease;
+}
+
+.sidebar .nav-link:hover {
+  color: #570202;
+}
+
+.sidebar .nav-link:hover::after {
+  width: 16px;
+}
+
+/* Основной контент */
+.main-content {
+  padding: 2rem;
+}
+
+/* Секции */
+section {
+  margin-bottom: 2.5rem;
+}
+
+section h2 {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.project-img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  margin: 1.5rem auto;
+  display: block;
+}
+
+section p {
+  margin-bottom: 1rem;
+  text-align: justify;
+  color: #555;
+}
+
+section p:first-of-type::first-letter {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #171818;
+  float: left;
+  line-height: 0.8;
+  margin-right: 0.3rem;
+  padding-top: 0.1rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #570202;
+  color: #f2eee6;
+  margin-top: 2rem;
+  border-radius: 8px;
+}
+
+footer h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+}
+
+footer p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+#footer-text {
+  font-style: italic;
+  color: #bdc3c7;
+  margin-top: 0.8rem;
+  font-size: 0.95rem;
+}
+
+/* Для других страниц (services, contacts, projects) */
+.content {
+  max-width: 100%;
+}
+
+ul, ol {
+  padding-left: 1.8rem;
+  margin: 1.5rem 0;
+  color: #555;
+}
+
+li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+.map-wrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.map-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.img-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.project-item {
+  text-align: center;
+  max-width: 350px;
+  width: 100%;
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease;
+}
+
+.project-img:hover {
+  transform: scale(1.05);
+}
+
+
+.contact-form {
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  max-width: 800px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: #570202;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  background-color: #570202;
+  color: #f2eee6;
+  border: none;
+  font-weight: 600;
+  padding: 0.6rem 1.5rem;
+  margin-top: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #3a0101;
+}
+
+/* Стиль для адреса офиса */
+#office-address {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #570202;
+  font-weight: 600;
+  margin: 1.5rem auto;
+  padding: 1.2rem;
+  background-color: #fff;
+  border: 2px dashed #570202;
+  border-radius: 8px;
+  max-width: 600px;
+}
+
+.highlight {
+  color: #570202;
+  font-weight: bold;
+}
